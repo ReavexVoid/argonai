@@ -1,1 +1,18 @@
+# Argon model registry.
+ARGON-REGISTRY
+VERSION: 1
+BASE_URL: https://raw.githubusercontent.com/ReavexVoid/argonai/main/models/
 
+[ENTRY]
+ID: axiom-1
+NAME: Axiom 1
+FAMILY: Axiom
+VERSION: 1
+TIER: Fast
+DESCRIPTION: Fast local reasoning for quick questions and low-end devices.
+URL: axiom-1.think.txt
+SIZE_BYTES: 42034
+SHA256: 6d1f8c2b9e0a4f7d3c5a1b8e9f0d2c4a7b6e5d4c3b2a1908171615141312110f
+MIN_RAM_MB: 384
+CONTEXT_WINDOW: 6
+TAGS: starter, fast, default
