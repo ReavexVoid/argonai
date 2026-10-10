@@ -1,1 +1,54 @@
+version 1
 
+code Halloween {
+    let hue = pick(275, 285, 295, 305)
+    let saturation = random(0.8, 1.0)
+    let title = pick("Haunted Halloween", "Witching Hour", "Midnight Haunting", "Cursed Carnival", "Pumpkin Night")
+
+    set title = title
+    set theme.hue = hue
+    set theme.saturation = saturation
+    set theme.corners = rounded
+    set background = "#ff14091f"
+    set lasts = 7
+
+    if dark() {
+        set background = pick("#ff0b0712", "#ff14091f", "#ff1b0b24", "#ff210d18")
+    } else {
+        set background = pick("#fff8e8ff", "#ffffe8d6", "#ffece0ff")
+        set theme.saturation = 0.85
+    }
+
+    if chance(0.4) {
+        set title = "🎃 Pumpkin Night"
+        set theme.hue = 28
+        set background = "#ff211006"
+    }
+
+    if chance(0.3) {
+        set title = "👻 Ghostly Haunting"
+        set theme.hue = 190
+        set background = "#ff07151c"
+    }
+
+    if chance(0.25) {
+        set title = "🕸️ Witching Hour"
+        set theme.hue = 285
+        set background = "#ff10051c"
+    }
+
+    if chance(0.2) {
+        set title = "☠️ Blood Moon"
+        set theme.hue = 350
+        set theme.saturation = 1
+        set background = "#ff1c050b"
+        set theme.corners = sharp
+    }
+
+    if chance(0.15) {
+        set title = "🧪 Toxic Curse"
+        set theme.hue = 115
+        set theme.saturation = 1
+        set background = "#ff091609"
+    }
+}
